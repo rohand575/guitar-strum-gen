@@ -1,0 +1,136 @@
+# ====================
+# Python
+# ====================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ====================
+# Virtual Environments
+# ====================
+venv/
+ENV/
+env/
+.venv/
+
+# ====================
+# Jupyter Notebooks
+# ====================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+notebooks/.ipynb_checkpoints/
+
+# ====================
+# IDE / Editor
+# ====================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# ====================
+# OS Generated
+# ====================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ====================
+# Data Files (Large)
+# ====================
+# Keep raw and processed folders but ignore large data files
+data/raw/*.wav
+data/raw/*.mp3
+data/raw/*.flac
+data/raw/*.mid
+data/raw/*.midi
+*.zip
+*.tar.gz
+*.rar
+
+# Do NOT ignore JSONL files (our dataset format)
+# !data/processed/*.jsonl
+
+# ====================
+# Model Checkpoints
+# ====================
+# Ignore large model files
+*.pt
+*.pth
+*.h5
+*.ckpt
+checkpoints/
+models/*.bin
+
+# Keep configs
+!configs/*.yaml
+!configs/*.json
+
+# ====================
+# Outputs (Generated)
+# ====================
+# Ignore generated outputs but keep the folder
+outputs/*
+!outputs/.gitkeep
+
+# ====================
+# Logs
+# ====================
+logs/
+*.log
+tensorboard/
+wandb/
+
+# ====================
+# Testing
+# ====================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# ====================
+# Environment Variables
+# ====================
+.env
+.env.local
+*.env
+
+# ====================
+# Secrets / Keys
+# ====================
+secrets/
+*.pem
+*.key
+api_keys.txt
+
+# ====================
+# Colab-specific
+# ====================
+sample_data/

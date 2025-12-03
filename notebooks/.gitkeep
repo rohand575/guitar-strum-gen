@@ -1,0 +1,9 @@
+# Jupyter notebooks for experiments and training
+# 
+# Planned notebooks:
+#   01_explore_dataset.ipynb - Explore GuitarSet and other sources
+#   02_build_dataset.ipynb   - Construct final JSONL dataset
+#   03_training.ipynb        - Train the neural model (run in Colab)
+#   04_evaluation.ipynb      - Compute metrics and generate plots
+#
+# These notebooks are designed to run in Google Colab for GPU access

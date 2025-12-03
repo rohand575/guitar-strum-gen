@@ -1,0 +1,7 @@
+# Architecture diagrams and design documentation
+# 
+# Planned contents:
+#   - system_overview.png      - High-level system diagram
+#   - model_architecture.png   - Neural model layers
+#   - data_flow.png           - How data moves through the system
+#   - design_notes.md         - Detailed design decisions

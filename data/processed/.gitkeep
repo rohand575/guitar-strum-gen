@@ -1,0 +1,3 @@
+# This folder contains processed, ready-to-use data
+# Main file: dataset.jsonl (our annotated text-chord-strum triples)
+# This is the data that gets fed into training

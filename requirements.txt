@@ -1,0 +1,77 @@
+# ====================
+# Guitar Strum Generator - Requirements
+# ====================
+# Thesis Project: Conversational AI for Symbolic Guitar Generation
+# Author: Rohan Rajendra Dhanawade
+# ====================
+
+# -----------------------
+# Core Data Science
+# -----------------------
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+
+# -----------------------
+# Data Validation
+# -----------------------
+pydantic>=2.0.0          # Schema validation for our dataset
+
+# -----------------------
+# Natural Language Processing
+# -----------------------
+transformers>=4.30.0     # For DistilBERT prompt parsing
+tokenizers>=0.13.0       # Fast tokenization
+torch>=2.0.0             # PyTorch for neural models
+
+# -----------------------
+# Machine Learning Utilities
+# -----------------------
+scikit-learn>=1.3.0      # Evaluation metrics, train/test splits
+tqdm>=4.65.0             # Progress bars
+
+# -----------------------
+# Jupyter & Notebooks
+# -----------------------
+jupyter>=1.0.0
+notebook>=7.0.0
+ipywidgets>=8.0.0
+
+# -----------------------
+# Visualization
+# -----------------------
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# -----------------------
+# Configuration Management
+# -----------------------
+pyyaml>=6.0              # YAML config files
+python-dotenv>=1.0.0     # Environment variables
+
+# -----------------------
+# Web App / API (Optional)
+# -----------------------
+streamlit>=1.25.0        # Simple UI
+fastapi>=0.100.0         # REST API (alternative)
+uvicorn>=0.23.0          # ASGI server for FastAPI
+
+# -----------------------
+# Music-Specific (Optional)
+# -----------------------
+# mido>=1.3.0            # MIDI file handling (uncomment if needed)
+# pretty_midi>=0.2.10    # MIDI manipulation (uncomment if needed)
+
+# -----------------------
+# Testing & Code Quality
+# -----------------------
+pytest>=7.4.0
+pytest-cov>=4.1.0
+flake8>=6.1.0
+black>=23.7.0            # Code formatter
+mypy>=1.5.0              # Type checking
+
+# -----------------------
+# Development
+# -----------------------
+ipdb>=0.13.0             # Debugging in notebooks

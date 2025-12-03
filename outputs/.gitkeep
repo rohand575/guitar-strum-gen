@@ -1,0 +1,9 @@
+# Generated outputs from the system
+#
+# This folder contains:
+#   - Generated chord sheets (JSON, ASCII tab)
+#   - Evaluation results
+#   - User study materials
+#
+# Note: This folder is mostly ignored by Git (see .gitignore)
+# Only .gitkeep is tracked to preserve the folder structure
