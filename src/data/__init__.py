@@ -15,4 +15,4 @@ The core data structure is the GuitarSample, which contains:
 """
 
 # When schema.py is created, we'll import the main class here:
-# from src.data.schema import GuitarSample
+from src.data.schema import GuitarSample
