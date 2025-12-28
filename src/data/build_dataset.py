@@ -253,6 +253,18 @@ def build_prompt(params: Dict) -> str:
     if random.random() < 0.3:
         prompt = prompt.capitalize()
     
+    # IMPORTANT: Ensure minimum length of 10 characters (schema requirement)
+    # If prompt is too short, add a prefix to make it valid
+    if len(prompt) < 10:
+        prefixes = [
+            "play me ",
+            "give me ",
+            "I want ",
+            "create ",
+            "generate ",
+        ]
+        prompt = random.choice(prefixes) + prompt
+    
     return prompt
 
 
