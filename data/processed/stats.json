@@ -1,0 +1,54 @@
+{
+  "total": 185,
+  "genres": {
+    "ballad": 18,
+    "rock": 25,
+    "acoustic": 26,
+    "indie": 24,
+    "folk": 18,
+    "country": 19,
+    "pop": 16,
+    "jazz": 17,
+    "blues": 22
+  },
+  "emotions": {
+    "peaceful": 17,
+    "mellow": 27,
+    "hopeful": 27,
+    "energetic": 28,
+    "nostalgic": 24,
+    "melancholic": 21,
+    "upbeat": 16,
+    "dramatic": 25
+  },
+  "modes": {
+    "major": 134,
+    "minor": 51
+  },
+  "keys": {
+    "A": 28,
+    "Fm": 12,
+    "E": 23,
+    "D": 21,
+    "C": 22,
+    "G": 20,
+    "Bm": 10,
+    "Dm": 9,
+    "F": 20,
+    "Am": 12,
+    "Em": 7,
+    "Gm": 1
+  },
+  "tempo_range": [
+    60,
+    159
+  ],
+  "avg_tempo": 98.3027027027027,
+  "unique_patterns": 41,
+  "unique_progressions": 75,
+  "splits": {
+    "train": 129,
+    "val": 27,
+    "test": 29
+  }
+}
