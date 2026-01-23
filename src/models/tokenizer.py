@@ -575,5 +575,5 @@ if __name__ == "__main__":
         print("(PyTorch not available - tensor conversion skipped)")
     
     print("\n" + "=" * 70)
-    print("TOKENIZER DEMONSTRATION COMPLETE ✓")
+    print("TOKENIZER DEMONSTRATION COMPLETE")
     print("=" * 70)

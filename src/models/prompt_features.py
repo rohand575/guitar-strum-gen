@@ -304,7 +304,7 @@ class PromptFeatures:
             lines.append(f"  Explicit Chords: {' → '.join(self.extracted_chords)}")
         
         if self.warnings:
-            lines.append(f"  ⚠️  Warnings: {'; '.join(self.warnings)}")
+            lines.append(f"  Warnings: {'; '.join(self.warnings)}")
         
         return '\n'.join(lines)
     
@@ -361,7 +361,7 @@ if __name__ == "__main__":
     print("=" * 60)
     
     # Test 1: Create features with explicit values
-    print("\n✅ Test 1: Creating features with explicit values")
+    print("\nTest 1: Creating features with explicit values")
     features = PromptFeatures(
         key="E",
         mode="minor",
@@ -392,7 +392,7 @@ if __name__ == "__main__":
     
     # Test 2: Test with defaults (ambiguous prompt)
     print("\n" + "=" * 60)
-    print("✅ Test 2: Features with mostly defaults (ambiguous prompt)")
+    print("Test 2: Features with mostly defaults (ambiguous prompt)")
     
     ambiguous_features = PromptFeatures(
         emotion="mellow",  # Only thing we could extract
@@ -413,7 +413,7 @@ if __name__ == "__main__":
     
     # Test 3: Dictionary export
     print("\n" + "=" * 60)
-    print("✅ Test 3: Dictionary export (for JSON serialization)")
+    print("Test 3: Dictionary export (for JSON serialization)")
     
     feature_dict = features.to_dict()
     print(f"  Keys in dict: {list(feature_dict.keys())}")
@@ -421,7 +421,7 @@ if __name__ == "__main__":
     
     # Test 4: Confidence level calculations
     print("\n" + "=" * 60)
-    print("✅ Test 4: Confidence level thresholds")
+    print("Test 4: Confidence level thresholds")
     
     conf = ExtractionConfidence(key=0.9, mode=0.6, genre=0.3, emotion=0.1, tempo=0.5)
     print(f"  Key (0.9): {conf.get_level(conf.key).value}")

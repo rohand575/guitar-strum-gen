@@ -34,7 +34,7 @@ try:
     TORCH_AVAILABLE = True
 except ImportError:
     TORCH_AVAILABLE = False
-    print("⚠️  PyTorch/Transformers not installed. Install with:")
+    print("Warning: PyTorch/Transformers not installed. Install with:")
     print("   pip install torch transformers")
 
 
@@ -149,8 +149,8 @@ class NeuralParserInference:
         # Move to device and set to evaluation mode
         self.model.to(self.device)
         self.model.eval()
-        
-        print("✅ Model loaded successfully!")
+
+        print("Model loaded successfully!")
         print(f"   Total parameters: {sum(p.numel() for p in self.model.parameters()):,}")
     
     def predict(self, prompt: str) -> Dict:
@@ -249,7 +249,7 @@ if __name__ == "__main__":
     checkpoint_path = Path("checkpoints/neural_parser_checkpoint.pt")
     
     if not checkpoint_path.exists():
-        print(f"\n❌ Checkpoint not found at: {checkpoint_path}")
+        print(f"\nCheckpoint not found at: {checkpoint_path}")
         print("\nTo use this script:")
         print("1. Train the model in Google Colab")
         print("   - Upload notebooks/05_train_neural_parser.ipynb to Colab")
@@ -265,10 +265,10 @@ if __name__ == "__main__":
         
         # Create the checkpoints directory
         checkpoint_path.parent.mkdir(parents=True, exist_ok=True)
-        print(f"\n✅ Created {checkpoint_path.parent}/ directory for you")
+        print(f"\nCreated {checkpoint_path.parent}/ directory for you")
         
     else:
-        print(f"\n✅ Found checkpoint at: {checkpoint_path}")
+        print(f"\nFound checkpoint at: {checkpoint_path}")
         
         if TORCH_AVAILABLE:
             # Load the model
@@ -290,11 +290,11 @@ if __name__ == "__main__":
             
             for prompt in test_prompts:
                 result = parser.predict(prompt)
-                print(f"\n📝 \"{prompt}\"")
+                print(f"\n\"{prompt}\"")
                 print(f"   Emotion: {result['emotion']} ({result['emotion_confidence']:.1%})")
                 print(f"   Genre: {result['genre']} ({result['genre_confidence']:.1%})")
         else:
-            print("\n⚠️  Cannot run inference - PyTorch not installed")
+            print("\nWarning: Cannot run inference - PyTorch not installed")
             print("   Install with: pip install torch transformers")
     
     print("\n" + "=" * 70)

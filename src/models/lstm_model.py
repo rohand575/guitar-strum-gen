@@ -682,5 +682,5 @@ if __name__ == "__main__":
         print(f"  Run {i+1}: {result['chords']} | {result['strum_pattern']}")
     
     print("\n" + "=" * 70)
-    print("GUITAR LSTM MODEL DEMONSTRATION COMPLETE ✓")
+    print("GUITAR LSTM MODEL DEMONSTRATION COMPLETE")
     print("=" * 70)

@@ -719,7 +719,7 @@ if __name__ == "__main__":
     for idx, prob in enumerate(genre_probs[0]):
         print(f"  {IDX_TO_GENRE[idx]}: {prob.item():.1%}")
     
-    print("\n⚠️  Note: Model is UNTRAINED - predictions are random!")
+    print("\nNote: Model is UNTRAINED - predictions are random!")
     print("    After training on your dataset, predictions will be meaningful.")
     
     # Test 4: Training demo (if dataset exists)
@@ -729,11 +729,11 @@ if __name__ == "__main__":
     
     train_path = Path("data/processed/train.jsonl")
     if train_path.exists():
-        print(f"\n✓ Training data found at {train_path}")
+        print(f"\nTraining data found at {train_path}")
         print("  To train the model, run:")
         print("  >>> model = train_neural_parser('data/processed/train.jsonl', epochs=5)")
     else:
-        print(f"\n✗ Training data not found at {train_path}")
+        print(f"\nTraining data not found at {train_path}")
         print("  Create your dataset first, then train!")
     
     print("\n" + "=" * 70)

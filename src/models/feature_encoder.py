@@ -607,5 +607,5 @@ if __name__ == "__main__":
             print(f"  {feature}: {len(details['values'])} values, {details['embedding_dim']} dims")
     
     print("\n" + "=" * 70)
-    print("FEATURE ENCODER DEMONSTRATION COMPLETE ✓")
+    print("FEATURE ENCODER DEMONSTRATION COMPLETE")
     print("=" * 70)
