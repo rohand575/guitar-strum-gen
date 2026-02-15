@@ -1,0 +1,1207 @@
+{
+  "system": "rule_based",
+  "timestamp": "2026-02-15T17:32:49.193264",
+  "test_samples": 29,
+  "metrics": {
+    "sample_count": 29,
+    "source_breakdown": {
+      "rule_based": 29
+    },
+    "correctness": {
+      "chord_validity": {
+        "name": "Chord Validity Rate",
+        "value": 1.0,
+        "numerator": 29,
+        "denominator": 29,
+        "details": {
+          "invalid_chords_found": [],
+          "invalid_chord_count": 0
+        }
+      },
+      "pattern_validity": {
+        "name": "Pattern Validity Rate",
+        "value": 1.0,
+        "numerator": 29,
+        "denominator": 29,
+        "details": {
+          "invalid_reasons": {
+            "wrong_length": 0,
+            "invalid_chars": 0,
+            "all_rests": 0
+          }
+        }
+      },
+      "key_adherence": {
+        "name": "Key Adherence Rate",
+        "value": 1.0,
+        "numerator": 116,
+        "denominator": 116,
+        "details": {
+          "non_diatonic_examples": [],
+          "total_non_diatonic": 0
+        }
+      }
+    },
+    "prompt_adherence": {
+      "key_match": {
+        "name": "Key Match Rate",
+        "value": 0.5862068965517241,
+        "numerator": 17,
+        "denominator": 29,
+        "details": {
+          "mismatches": [
+            {
+              "expected": "E major",
+              "got": "A minor"
+            },
+            {
+              "expected": "C major",
+              "got": "G major"
+            },
+            {
+              "expected": "F minor",
+              "got": "F major"
+            },
+            {
+              "expected": "F minor",
+              "got": "F major"
+            },
+            {
+              "expected": "A major",
+              "got": "G major"
+            },
+            {
+              "expected": "D major",
+              "got": "G major"
+            },
+            {
+              "expected": "B minor",
+              "got": "A# major"
+            },
+            {
+              "expected": "G major",
+              "got": "A minor"
+            },
+            {
+              "expected": "D minor",
+              "got": "D major"
+            },
+            {
+              "expected": "E minor",
+              "got": "E major"
+            }
+          ]
+        }
+      },
+      "genre_match": {
+        "name": "Genre Match Rate",
+        "value": 1.0,
+        "numerator": 29,
+        "denominator": 29,
+        "details": {
+          "mismatches": []
+        }
+      },
+      "emotion_match": {
+        "name": "Emotion Match Rate",
+        "value": 0.8275862068965517,
+        "numerator": 24,
+        "denominator": 29,
+        "details": {
+          "mismatches": [
+            {
+              "expected": "peaceful",
+              "got": "mellow"
+            },
+            {
+              "expected": "energetic",
+              "got": "mellow"
+            },
+            {
+              "expected": "dramatic",
+              "got": "energetic"
+            },
+            {
+              "expected": "dramatic",
+              "got": "mellow"
+            },
+            {
+              "expected": "peaceful",
+              "got": "mellow"
+            }
+          ]
+        }
+      }
+    },
+    "diversity": {
+      "unique_progressions": {
+        "name": "Unique Progression Ratio",
+        "value": 0.896551724137931,
+        "numerator": 26,
+        "denominator": 29,
+        "details": {
+          "unique_count": 26,
+          "total_count": 29,
+          "most_common": [
+            {
+              "progression": [
+                "G",
+                "C",
+                "D",
+                "G"
+              ],
+              "count": 2
+            },
+            {
+              "progression": [
+                "F",
+                "A#",
+                "F",
+                "C"
+              ],
+              "count": 2
+            },
+            {
+              "progression": [
+                "F",
+                "Dm",
+                "A#",
+                "C"
+              ],
+              "count": 2
+            },
+            {
+              "progression": [
+                "Em",
+                "C",
+                "G",
+                "D"
+              ],
+              "count": 1
+            },
+            {
+              "progression": [
+                "Am",
+                "G",
+                "F",
+                "G"
+              ],
+              "count": 1
+            }
+          ]
+        }
+      },
+      "unique_patterns": {
+        "name": "Unique Pattern Ratio",
+        "value": 0.4482758620689655,
+        "numerator": 13,
+        "denominator": 29,
+        "details": {
+          "unique_count": 13,
+          "total_count": 29,
+          "most_common": [
+            {
+              "pattern": "DDUUDDUU",
+              "count": 4
+            },
+            {
+              "pattern": "D___DUDU",
+              "count": 4
+            },
+            {
+              "pattern": "D___D___",
+              "count": 3
+            },
+            {
+              "pattern": "D__DU_D_",
+              "count": 3
+            },
+            {
+              "pattern": "D_D_DD__",
+              "count": 2
+            }
+          ]
+        }
+      },
+      "chord_entropy": {
+        "name": "Chord Distribution Entropy",
+        "value": 0.8497365683836847,
+        "numerator": 0,
+        "denominator": 0,
+        "details": {
+          "raw_entropy": 3.7893421205625577,
+          "normalized_entropy": 0.8497365683836847,
+          "unique_chords_used": 22,
+          "total_chord_tokens": 116,
+          "max_possible_entropy": 4.459431618637297,
+          "top_10_chords": [
+            {
+              "chord": "C",
+              "count": 19,
+              "percentage": 0.16379310344827586
+            },
+            {
+              "chord": "G",
+              "count": 17,
+              "percentage": 0.14655172413793102
+            },
+            {
+              "chord": "F",
+              "count": 16,
+              "percentage": 0.13793103448275862
+            },
+            {
+              "chord": "D",
+              "count": 10,
+              "percentage": 0.08620689655172414
+            },
+            {
+              "chord": "A#",
+              "count": 9,
+              "percentage": 0.07758620689655173
+            },
+            {
+              "chord": "Dm",
+              "count": 8,
+              "percentage": 0.06896551724137931
+            },
+            {
+              "chord": "A",
+              "count": 7,
+              "percentage": 0.0603448275862069
+            },
+            {
+              "chord": "Am",
+              "count": 5,
+              "percentage": 0.04310344827586207
+            },
+            {
+              "chord": "E",
+              "count": 4,
+              "percentage": 0.034482758620689655
+            },
+            {
+              "chord": "Em",
+              "count": 3,
+              "percentage": 0.02586206896551724
+            }
+          ]
+        }
+      },
+      "pattern_entropy": {
+        "name": "Pattern Distribution Entropy",
+        "value": 0.9632748400851203,
+        "numerator": 0,
+        "denominator": 0,
+        "details": {
+          "raw_entropy": 3.5645404777369882,
+          "normalized_entropy": 0.9632748400851203,
+          "unique_patterns": 13,
+          "total_patterns": 29,
+          "top_5_patterns": [
+            {
+              "pattern": "DDUUDDUU",
+              "count": 4
+            },
+            {
+              "pattern": "D___DUDU",
+              "count": 4
+            },
+            {
+              "pattern": "D___D___",
+              "count": 3
+            },
+            {
+              "pattern": "D__DU_D_",
+              "count": 3
+            },
+            {
+              "pattern": "D_D_DD__",
+              "count": 2
+            }
+          ]
+        }
+      }
+    }
+  },
+  "generated_samples": [
+    {
+      "id": "real_0009",
+      "prompt": "Show me a rock chord progression, wistful style, E minor",
+      "chords": [
+        "Em",
+        "C",
+        "G",
+        "D"
+      ],
+      "strum_pattern": "D_D_DD__",
+      "tempo": 91,
+      "key": "Em",
+      "mode": "minor",
+      "genre": "rock",
+      "emotion": "nostalgic",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "Em",
+          "D",
+          "C",
+          "Em",
+          "C",
+          "Em",
+          "D",
+          "C"
+        ],
+        "strum_pattern": "DD__DD__",
+        "key": "Em",
+        "mode": "minor",
+        "genre": "rock",
+        "emotion": "nostalgic"
+      }
+    },
+    {
+      "id": "syn_0147",
+      "prompt": "the kind of rock progression that feels dramatic",
+      "chords": [
+        "Am",
+        "G",
+        "F",
+        "G"
+      ],
+      "strum_pattern": "DD__DD__",
+      "tempo": 71,
+      "key": "Am",
+      "mode": "minor",
+      "genre": "rock",
+      "emotion": "dramatic",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "E",
+          "A",
+          "B",
+          "E"
+        ],
+        "strum_pattern": "DD__DD__",
+        "key": "E",
+        "mode": "major",
+        "genre": "rock",
+        "emotion": "dramatic"
+      }
+    },
+    {
+      "id": "syn_0032",
+      "prompt": "Bright acoustic progression in f minor at 135 bpm",
+      "chords": [
+        "Fm",
+        "C#",
+        "G#",
+        "D#"
+      ],
+      "strum_pattern": "D_DU_UD_",
+      "tempo": 135,
+      "key": "Fm",
+      "mode": "minor",
+      "genre": "acoustic",
+      "emotion": "upbeat",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "Fm",
+          "A#m",
+          "Cm",
+          "Fm"
+        ],
+        "strum_pattern": "DDUUDDUU",
+        "key": "Fm",
+        "mode": "minor",
+        "genre": "acoustic",
+        "emotion": "upbeat"
+      }
+    },
+    {
+      "id": "syn_0168",
+      "prompt": "Show me a ballad chord progression, optimistic style, G major",
+      "chords": [
+        "G",
+        "C",
+        "D",
+        "G"
+      ],
+      "strum_pattern": "D_D___DU",
+      "tempo": 107,
+      "key": "G",
+      "mode": "major",
+      "genre": "ballad",
+      "emotion": "hopeful",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "G",
+          "Em",
+          "C",
+          "D"
+        ],
+        "strum_pattern": "D_D___DU",
+        "key": "G",
+        "mode": "major",
+        "genre": "ballad",
+        "emotion": "hopeful"
+      }
+    },
+    {
+      "id": "syn_0071",
+      "prompt": "Ballad at 67 bpm, soft mood",
+      "chords": [
+        "G",
+        "Bm",
+        "C",
+        "D"
+      ],
+      "strum_pattern": "D__D__D_",
+      "tempo": 67,
+      "key": "G",
+      "mode": "major",
+      "genre": "ballad",
+      "emotion": "mellow",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "C",
+          "Am",
+          "F",
+          "G"
+        ],
+        "strum_pattern": "D__D__D_",
+        "key": "C",
+        "mode": "major",
+        "genre": "ballad",
+        "emotion": "peaceful"
+      }
+    },
+    {
+      "id": "syn_0144",
+      "prompt": "smooth driving country progression in F",
+      "chords": [
+        "F",
+        "A#",
+        "F",
+        "C"
+      ],
+      "strum_pattern": "D___D___",
+      "tempo": 67,
+      "key": "F",
+      "mode": "major",
+      "genre": "country",
+      "emotion": "mellow",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "Fm",
+          "C#",
+          "A#m",
+          "Cm"
+        ],
+        "strum_pattern": "D_DUDUDU",
+        "key": "Fm",
+        "mode": "minor",
+        "genre": "country",
+        "emotion": "energetic"
+      }
+    },
+    {
+      "id": "syn_0090",
+      "prompt": "Got any epic blues progressions in c?",
+      "chords": [
+        "C",
+        "F",
+        "G",
+        "C"
+      ],
+      "strum_pattern": "D_D_D_D_",
+      "tempo": 89,
+      "key": "C",
+      "mode": "major",
+      "genre": "blues",
+      "emotion": "dramatic",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "C",
+          "F",
+          "Am",
+          "G"
+        ],
+        "strum_pattern": "D_DU_D__",
+        "key": "C",
+        "mode": "major",
+        "genre": "blues",
+        "emotion": "dramatic"
+      }
+    },
+    {
+      "id": "syn_0123",
+      "prompt": "need chords and strum for dramatic acoustic in F major",
+      "chords": [
+        "F",
+        "C",
+        "Dm",
+        "A#"
+      ],
+      "strum_pattern": "D_DU_UD_",
+      "tempo": 75,
+      "key": "F",
+      "mode": "major",
+      "genre": "acoustic",
+      "emotion": "dramatic",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "F",
+          "Am",
+          "A#",
+          "C"
+        ],
+        "strum_pattern": "D__D__D_",
+        "key": "F",
+        "mode": "major",
+        "genre": "acoustic",
+        "emotion": "dramatic"
+      }
+    },
+    {
+      "id": "syn_0082",
+      "prompt": "what's a good wistful indie progression in E major?",
+      "chords": [
+        "E",
+        "A",
+        "C#m",
+        "B"
+      ],
+      "strum_pattern": "D___D___",
+      "tempo": 90,
+      "key": "E",
+      "mode": "major",
+      "genre": "indie",
+      "emotion": "nostalgic",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "E",
+          "B",
+          "C#m",
+          "A"
+        ],
+        "strum_pattern": "D_______",
+        "key": "E",
+        "mode": "major",
+        "genre": "indie",
+        "emotion": "nostalgic"
+      }
+    },
+    {
+      "id": "syn_0126",
+      "prompt": "blues with a energetic, quick feel in C",
+      "chords": [
+        "C",
+        "G",
+        "F",
+        "C"
+      ],
+      "strum_pattern": "DDUUDDUU",
+      "tempo": 130,
+      "key": "C",
+      "mode": "major",
+      "genre": "blues",
+      "emotion": "energetic",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "C",
+          "F",
+          "C",
+          "G"
+        ],
+        "strum_pattern": "DDUU__DU",
+        "key": "C",
+        "mode": "major",
+        "genre": "blues",
+        "emotion": "energetic"
+      }
+    },
+    {
+      "id": "syn_0054",
+      "prompt": "Generate a ballad progression in A minor with a sad feel",
+      "chords": [
+        "Am",
+        "F",
+        "C",
+        "G"
+      ],
+      "strum_pattern": "D___DUDU",
+      "tempo": 84,
+      "key": "Am",
+      "mode": "minor",
+      "genre": "ballad",
+      "emotion": "melancholic",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "Am",
+          "Dm",
+          "G",
+          "C"
+        ],
+        "strum_pattern": "D_D___DU",
+        "key": "Am",
+        "mode": "minor",
+        "genre": "ballad",
+        "emotion": "melancholic"
+      }
+    },
+    {
+      "id": "syn_0074",
+      "prompt": "any ideas for country in F with bittersweet vibe?",
+      "chords": [
+        "F",
+        "A#",
+        "F",
+        "C"
+      ],
+      "strum_pattern": "D__DU_D_",
+      "tempo": 82,
+      "key": "F",
+      "mode": "major",
+      "genre": "country",
+      "emotion": "nostalgic",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "F",
+          "Dm",
+          "A#",
+          "C"
+        ],
+        "strum_pattern": "D_DU_DU_",
+        "key": "F",
+        "mode": "major",
+        "genre": "country",
+        "emotion": "nostalgic"
+      }
+    },
+    {
+      "id": "syn_0171",
+      "prompt": "chill ballad in F",
+      "chords": [
+        "F",
+        "Dm",
+        "A#",
+        "C"
+      ],
+      "strum_pattern": "D_D___DU",
+      "tempo": 75,
+      "key": "F",
+      "mode": "major",
+      "genre": "ballad",
+      "emotion": "mellow",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "Fm",
+          "A#m",
+          "D#",
+          "G#"
+        ],
+        "strum_pattern": "D___DUDU",
+        "key": "Fm",
+        "mode": "minor",
+        "genre": "ballad",
+        "emotion": "mellow"
+      }
+    },
+    {
+      "id": "syn_0058",
+      "prompt": "I want rock chords that feel intense",
+      "chords": [
+        "G",
+        "C",
+        "G",
+        "D"
+      ],
+      "strum_pattern": "D_D_DD__",
+      "tempo": 118,
+      "key": "G",
+      "mode": "major",
+      "genre": "rock",
+      "emotion": "energetic",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "A",
+          "D",
+          "F#m",
+          "E"
+        ],
+        "strum_pattern": "DD__DD__",
+        "key": "A",
+        "mode": "major",
+        "genre": "rock",
+        "emotion": "dramatic"
+      }
+    },
+    {
+      "id": "syn_0077",
+      "prompt": "sorrowful chords in blues style, D minor",
+      "chords": [
+        "Dm",
+        "F",
+        "C",
+        "A#"
+      ],
+      "strum_pattern": "D___D___",
+      "tempo": 80,
+      "key": "Dm",
+      "mode": "minor",
+      "genre": "blues",
+      "emotion": "melancholic",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "Dm",
+          "Gm",
+          "Am",
+          "Dm"
+        ],
+        "strum_pattern": "D___D___",
+        "key": "Dm",
+        "mode": "minor",
+        "genre": "blues",
+        "emotion": "melancholic"
+      }
+    },
+    {
+      "id": "syn_0143",
+      "prompt": "throw me a smooth blues progression",
+      "chords": [
+        "G",
+        "C",
+        "D",
+        "G"
+      ],
+      "strum_pattern": "D_D_D_D_",
+      "tempo": 92,
+      "key": "G",
+      "mode": "major",
+      "genre": "blues",
+      "emotion": "mellow",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "D",
+          "G",
+          "A",
+          "D"
+        ],
+        "strum_pattern": "D_D_D_D_",
+        "key": "D",
+        "mode": "major",
+        "genre": "blues",
+        "emotion": "mellow"
+      }
+    },
+    {
+      "id": "syn_0072",
+      "prompt": "make a moderate gentle indie song in D major",
+      "chords": [
+        "D",
+        "F#m",
+        "G",
+        "A"
+      ],
+      "strum_pattern": "D__DU_D_",
+      "tempo": 100,
+      "key": "D",
+      "mode": "major",
+      "genre": "indie",
+      "emotion": "peaceful",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "D",
+          "A",
+          "Bm",
+          "G"
+        ],
+        "strum_pattern": "D__DU_D_",
+        "key": "D",
+        "mode": "major",
+        "genre": "indie",
+        "emotion": "peaceful"
+      }
+    },
+    {
+      "id": "syn_0064",
+      "prompt": "Steady indie in f major",
+      "chords": [
+        "F",
+        "Dm",
+        "A#",
+        "C"
+      ],
+      "strum_pattern": "D_DU____",
+      "tempo": 90,
+      "key": "F",
+      "mode": "major",
+      "genre": "indie",
+      "emotion": "mellow",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "F",
+          "C",
+          "Dm",
+          "A#"
+        ],
+        "strum_pattern": "D_DU_UD_",
+        "key": "F",
+        "mode": "major",
+        "genre": "indie",
+        "emotion": "dramatic"
+      }
+    },
+    {
+      "id": "syn_0050",
+      "prompt": "Looking for inspiring jazz chords in f major",
+      "chords": [
+        "F",
+        "A#",
+        "C",
+        "F"
+      ],
+      "strum_pattern": "DDUUDDUU",
+      "tempo": 115,
+      "key": "F",
+      "mode": "major",
+      "genre": "jazz",
+      "emotion": "hopeful",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "F",
+          "Dm",
+          "A#",
+          "C"
+        ],
+        "strum_pattern": "D___D_D_",
+        "key": "F",
+        "mode": "major",
+        "genre": "jazz",
+        "emotion": "hopeful"
+      }
+    },
+    {
+      "id": "syn_0124",
+      "prompt": "how about a inspiring jazz in B?",
+      "chords": [
+        "A#",
+        "Cm",
+        "F",
+        "A#"
+      ],
+      "strum_pattern": "DDUUDDUU",
+      "tempo": 115,
+      "key": "Bb",
+      "mode": "major",
+      "genre": "jazz",
+      "emotion": "hopeful",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "Bm",
+          "C#dim",
+          "F#m",
+          "Bm"
+        ],
+        "strum_pattern": "D___D__U",
+        "key": "Bm",
+        "mode": "minor",
+        "genre": "jazz",
+        "emotion": "hopeful"
+      }
+    },
+    {
+      "id": "syn_0157",
+      "prompt": "throw me a cinematic blues progression",
+      "chords": [
+        "Am",
+        "Dm",
+        "G",
+        "C"
+      ],
+      "strum_pattern": "D___DUDU",
+      "tempo": 95,
+      "key": "Am",
+      "mode": "minor",
+      "genre": "blues",
+      "emotion": "dramatic",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "G",
+          "C",
+          "G",
+          "D"
+        ],
+        "strum_pattern": "D_D_D_D_",
+        "key": "G",
+        "mode": "major",
+        "genre": "blues",
+        "emotion": "dramatic"
+      }
+    },
+    {
+      "id": "syn_0068",
+      "prompt": "recording a dramatic indie piece in G",
+      "chords": [
+        "G",
+        "D",
+        "Em",
+        "C"
+      ],
+      "strum_pattern": "D__DU_D_",
+      "tempo": 88,
+      "key": "G",
+      "mode": "major",
+      "genre": "indie",
+      "emotion": "dramatic",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "G",
+          "C",
+          "Em",
+          "D"
+        ],
+        "strum_pattern": "D_D___DU",
+        "key": "G",
+        "mode": "major",
+        "genre": "indie",
+        "emotion": "dramatic"
+      }
+    },
+    {
+      "id": "real_0003",
+      "prompt": "build a indie progression with cinematic feel in A minor",
+      "chords": [
+        "Am",
+        "F",
+        "Dm",
+        "Em"
+      ],
+      "strum_pattern": "D__D__D_",
+      "tempo": 78,
+      "key": "Am",
+      "mode": "minor",
+      "genre": "indie",
+      "emotion": "dramatic",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "Am",
+          "A",
+          "Am",
+          "Dm",
+          "Am",
+          "Dm",
+          "Am",
+          "Dm"
+        ],
+        "strum_pattern": "D___D___",
+        "key": "Am",
+        "mode": "minor",
+        "genre": "indie",
+        "emotion": "dramatic"
+      }
+    },
+    {
+      "id": "syn_0165",
+      "prompt": "generate a calm acoustic in D minor, relaxed tempo",
+      "chords": [
+        "Dm",
+        "Gm",
+        "Am",
+        "Dm"
+      ],
+      "strum_pattern": "D_DU____",
+      "tempo": 70,
+      "key": "Dm",
+      "mode": "minor",
+      "genre": "acoustic",
+      "emotion": "mellow",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "Dm",
+          "A#",
+          "F",
+          "C"
+        ],
+        "strum_pattern": "D__D__D_",
+        "key": "Dm",
+        "mode": "minor",
+        "genre": "acoustic",
+        "emotion": "peaceful"
+      }
+    },
+    {
+      "id": "syn_0175",
+      "prompt": "generate a melancholic country in A major, medium tempo",
+      "chords": [
+        "A",
+        "D",
+        "E",
+        "A"
+      ],
+      "strum_pattern": "D_______",
+      "tempo": 100,
+      "key": "A",
+      "mode": "major",
+      "genre": "country",
+      "emotion": "melancholic",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "A",
+          "D",
+          "A",
+          "E"
+        ],
+        "strum_pattern": "D_DUD_D_",
+        "key": "A",
+        "mode": "major",
+        "genre": "country",
+        "emotion": "melancholic"
+      }
+    },
+    {
+      "id": "syn_0174",
+      "prompt": "any ideas for country in D with dramatic vibe?",
+      "chords": [
+        "D",
+        "G",
+        "Bm",
+        "A"
+      ],
+      "strum_pattern": "DDUUDDUU",
+      "tempo": 86,
+      "key": "D",
+      "mode": "major",
+      "genre": "country",
+      "emotion": "dramatic",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "Dm",
+          "Gm",
+          "Am",
+          "Dm"
+        ],
+        "strum_pattern": "D___D_DU",
+        "key": "Dm",
+        "mode": "minor",
+        "genre": "country",
+        "emotion": "dramatic"
+      }
+    },
+    {
+      "id": "syn_0091",
+      "prompt": "Practicing ballad and want a bittersweet progression in e",
+      "chords": [
+        "E",
+        "C#m",
+        "A",
+        "B"
+      ],
+      "strum_pattern": "D___DUDU",
+      "tempo": 76,
+      "key": "E",
+      "mode": "major",
+      "genre": "ballad",
+      "emotion": "nostalgic",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "Em",
+          "G",
+          "D",
+          "C"
+        ],
+        "strum_pattern": "D___DUDU",
+        "key": "Em",
+        "mode": "minor",
+        "genre": "ballad",
+        "emotion": "nostalgic"
+      }
+    },
+    {
+      "id": "syn_0140",
+      "prompt": "recording a relaxed ballad piece in A",
+      "chords": [
+        "A",
+        "E",
+        "F#m",
+        "D"
+      ],
+      "strum_pattern": "D___DUDU",
+      "tempo": 70,
+      "key": "A",
+      "mode": "major",
+      "genre": "ballad",
+      "emotion": "mellow",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "Am",
+          "C",
+          "G",
+          "F"
+        ],
+        "strum_pattern": "D_DU____",
+        "key": "Am",
+        "mode": "minor",
+        "genre": "ballad",
+        "emotion": "mellow"
+      }
+    },
+    {
+      "id": "syn_0088",
+      "prompt": "Produce a hopeful blues sequence in B minor",
+      "chords": [
+        "A#m",
+        "F#",
+        "C#",
+        "G#"
+      ],
+      "strum_pattern": "DDUU__DU",
+      "tempo": 97,
+      "key": "Bbm",
+      "mode": "minor",
+      "genre": "blues",
+      "emotion": "hopeful",
+      "source": "rule_based",
+      "ground_truth": {
+        "chords": [
+          "Bm",
+          "Em",
+          "Bm",
+          "F#m"
+        ],
+        "strum_pattern": "D_D_D_D_",
+        "key": "Bm",
+        "mode": "minor",
+        "genre": "blues",
+        "emotion": "hopeful"
+      }
+    }
+  ]
+}
