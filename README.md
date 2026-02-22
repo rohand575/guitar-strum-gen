@@ -1,4 +1,4 @@
-# 🎸 Guitar Strum Generator
+# Guitar Strum Generator
 
 **A Conversational AI System for Symbolic Guitar Strumming Pattern and Chord Progression Generation**
 
@@ -8,7 +8,7 @@
 
 ---
 
-## 📋 Overview
+## Overview
 
 This system generates **symbolic guitar notation** (chord progressions + strumming patterns) from natural language prompts. Unlike audio-based AI music systems, this produces **editable, readable outputs** that guitarists can directly use.
 
@@ -22,7 +22,7 @@ Output:
 
 ---
 
-## 🎯 Key Features
+## Key Features
 
 - **Natural Language Input**: Describe what you want in plain English
 - **Symbolic Output**: Get chord progressions + strumming patterns (no audio files)
@@ -31,7 +31,7 @@ Output:
 
 ---
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 guitar-strum-gen/
@@ -61,7 +61,7 @@ guitar-strum-gen/
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Clone the Repository
 ```bash
@@ -88,7 +88,7 @@ python -m src.app.generate "upbeat pop progression in G major"
 
 ---
 
-## 📊 System Architecture
+## System Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -137,7 +137,7 @@ python -m src.app.generate "upbeat pop progression in G major"
 
 ---
 
-## 📁 Data Format
+## Data Format
 
 Each training example follows this JSON schema:
 
@@ -158,7 +158,7 @@ Each training example follows this JSON schema:
 
 ---
 
-## 🧪 Running Tests
+## Running Tests
 
 ```bash
 pytest tests/ -v
@@ -166,7 +166,7 @@ pytest tests/ -v
 
 ---
 
-## 📈 Evaluation Metrics
+## Evaluation Metrics
 
 | Metric | Description |
 |--------|-------------|
@@ -177,7 +177,7 @@ pytest tests/ -v
 
 ---
 
-## 🔧 Development
+## Development
 
 ### For Local Development
 ```bash
@@ -196,7 +196,7 @@ Upload the notebooks from `notebooks/` to Google Colab and follow the instructio
 
 ---
 
-## 📚 References
+## References
 
 Key papers informing this work:
 - Bhandari et al. (2025) - Text2MIDI
@@ -206,13 +206,13 @@ Key papers informing this work:
 
 ---
 
-## 📄 License
+## License
 
 This project is for academic purposes as part of a Master's thesis.
 
 ---
 
-## 👤 Author
+## Author
 
 **Rohan Rajendra Dhanawade**  
 M.Sc. Computer Science — Big Data & AI  
