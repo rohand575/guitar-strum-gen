@@ -5,8 +5,8 @@ Guitar Strum Generator - Thesis Project
 Author: Rohan Rajendra Dhanawade
 
 This module extracts structured musical features from natural language prompts.
-It's the "brain" that interprets what users want when they type things like
-"Give me a sad folk song in E minor at a slow pace".
+It extracts structured musical features when users provide natural language
+input like "Give me a sad folk song in E minor at a slow pace".
 
 Architecture:
     User Prompt → [Key Extractor] → [Genre Detector] → [Emotion Analyzer] 
@@ -25,8 +25,8 @@ Usage:
     features = parser.parse("sad folk song in E minor, slow tempo")
     print(features.summary())
 
-This is the RULE-BASED implementation. A neural enhancement (DistilBERT)
-can be added later for ambiguous cases.
+This is the rule-based implementation. A neural enhancement (DistilBERT)
+handles more ambiguous cases.
 """
 
 import re

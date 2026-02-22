@@ -16,7 +16,6 @@ along with detailed breakdown information for thesis reporting.
 
 Author: Rohan Rajendra Dhanawade
 Project: Master's Thesis - SRH Berlin University of Applied Sciences
-Chat: 10 - Evaluation Metrics & Experiments
 """
 
 from typing import List, Dict, Tuple, Optional, Any, Set
@@ -59,7 +58,7 @@ FLAT_TO_SHARP = {
     "Db": "C#", "Eb": "D#", "Fb": "E", "Gb": "F#", "Ab": "G#", "Bb": "A#"
 }
 
-# Valid genres and emotions (from your dataset)
+# Valid genres and emotions (from the dataset)
 VALID_GENRES = {"rock", "pop", "folk", "country", "ballad", "blues", "jazz", "indie", "acoustic"}
 VALID_EMOTIONS = {"upbeat", "melancholic", "mellow", "energetic", "peaceful", "dramatic", "hopeful", "nostalgic"}
 

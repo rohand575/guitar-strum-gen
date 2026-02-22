@@ -1,5 +1,5 @@
 """
-run_neural_eval.py (FIXED)  —  Run in your project ROOT folder.
+run_neural_eval.py  —  Neural evaluation runner.
 python run_neural_eval.py
 """
 
@@ -103,4 +103,4 @@ with open('neural_metrics.json', 'w') as f:
     json.dump(results, f, indent=2)
 
 print("\nSaved to neural_metrics.json")
-print("Done! Copy full output and paste to Claude.")
+print("Done! Results saved to neural_metrics.json")

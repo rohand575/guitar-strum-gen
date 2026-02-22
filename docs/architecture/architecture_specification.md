@@ -2,10 +2,10 @@
 ## Guitar Chord & Strumming Pattern Generator
 
 **Document Version:** 1.0  
-**Chat:** 6 - Model Design (Architecture Only)  
+**Phase:** Model Design (Architecture Only)  
 **Date:** January 2026  
 **Author:** Rohan Rajendra Dhanawade  
-**Purpose:** Technical specification for Chat 7 implementation
+**Purpose:** Technical specification for model implementation
 
 ---
 
@@ -31,7 +31,7 @@ Both models share the same tokenizer, feature encoder, and training pipeline.
 │                         │                                                   │
 │                         ▼                                                   │
 │    ┌─────────────────────────────────────────┐                             │
-│    │         DISTILBERT PARSER               │  ◄── Already built (Chat 5) │
+│    │         DISTILBERT PARSER               │  ◄── Already built           │
 │    │     (Neural Prompt Feature Extractor)   │                             │
 │    └─────────────────────────────────────────┘                             │
 │                         │                                                   │
@@ -48,7 +48,7 @@ Both models share the same tokenizer, feature encoder, and training pipeline.
 │                         │                                                   │
 │                         ▼                                                   │
 │    ┌─────────────────────────────────────────┐                             │
-│    │         FEATURE ENCODER                 │  ◄── NEW (Chat 7)           │
+│    │         FEATURE ENCODER                 │  ◄── NEW                     │
 │    │   (Embeddings → Conditioning Vector)    │                             │
 │    └─────────────────────────────────────────┘                             │
 │                         │                                                   │
@@ -61,20 +61,20 @@ Both models share the same tokenizer, feature encoder, and training pipeline.
 │          ┌──────────────┴──────────────┐                                   │
 │          ▼                             ▼                                   │
 │    ┌───────────┐                 ┌───────────┐                             │
-│    │   LSTM    │                 │TRANSFORMER│  ◄── NEW (Chat 7)           │
+│    │   LSTM    │                 │TRANSFORMER│  ◄── NEW                     │
 │    │  MODEL    │                 │   MODEL   │                             │
 │    └───────────┘                 └───────────┘                             │
 │          │                             │                                   │
 │          └──────────────┬──────────────┘                                   │
 │                         ▼                                                   │
 │    ┌─────────────────────────────────────────┐                             │
-│    │            TOKENIZER                    │  ◄── NEW (Chat 7)           │
+│    │            TOKENIZER                    │  ◄── NEW                     │
 │    │      (Decode token IDs → text)          │                             │
 │    └─────────────────────────────────────────┘                             │
 │                         │                                                   │
 │                         ▼                                                   │
 │    ┌─────────────────────────────────────────┐                             │
-│    │           VALIDATOR                     │  ◄── Already built (Chat 5) │
+│    │           VALIDATOR                     │  ◄── Already built           │
 │    │   (Check harmonic correctness)          │                             │
 │    └─────────────────────────────────────────┘                             │
 │                         │                                                   │
@@ -668,7 +668,7 @@ INFERENCE_CONFIG = {
 
 ---
 
-## 9. File Structure for Chat 7
+## 9. File Structure
 
 ```
 src/
@@ -698,7 +698,7 @@ notebooks/
 
 ---
 
-## 10. Evaluation Plan (Preview for Chat 10)
+## 10. Evaluation Plan
 
 ### 10.1 Metrics to Implement
 
@@ -755,7 +755,7 @@ notebooks/
 
 ---
 
-## 12. Next Steps (Chat 7 Preview)
+## 12. Next Steps
 
 1. **Implement Tokenizer** (`src/models/tokenizer.py`)
 2. **Implement Feature Encoder** (`src/models/feature_encoder.py`)
@@ -771,4 +771,4 @@ notebooks/
 
 **Document Complete** ✓
 
-*This specification will guide all Chat 7 implementation work.*
+*This specification guides the model implementation work.*

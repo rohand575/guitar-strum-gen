@@ -100,7 +100,7 @@ class DistilBertPromptParser(nn.Module):
 
 
 # =============================================================================
-# INFERENCE CLASS (what you use in your system)
+# INFERENCE CLASS
 # =============================================================================
 
 class NeuralParserInference:
@@ -224,7 +224,7 @@ def create_hybrid_parser(checkpoint_path: str = None):
     """
     Create a hybrid parser that combines neural + rule-based.
     
-    This is what you use in your final system!
+    Integration point for the hybrid generation pipeline.
     
     Args:
         checkpoint_path: Path to trained model (optional)
@@ -253,7 +253,7 @@ if __name__ == "__main__":
         print("\nTo use this script:")
         print("1. Train the model in Google Colab")
         print("   - Upload notebooks/05_train_neural_parser.ipynb to Colab")
-        print("   - Upload your train.jsonl dataset")
+        print("   - Upload the train.jsonl dataset")
         print("   - Run all cells")
         print("   - Download neural_parser_checkpoint.pt")
         print("")
@@ -261,7 +261,7 @@ if __name__ == "__main__":
         print(f"   - Create folder: mkdir -p checkpoints")
         print(f"   - Move file: mv ~/Downloads/neural_parser_checkpoint.pt checkpoints/")
         print("")
-        print("3. Run this script again!")
+        print("3. Run this script again")
         
         # Create the checkpoints directory
         checkpoint_path.parent.mkdir(parents=True, exist_ok=True)

@@ -50,5 +50,5 @@ INPUT:  "Give me a nostalgic country song in D major, about 100 BPM"
                     └─────────────────┘
                               │
                               ▼
-OUTPUT: Complete GuitarSample ready for your thesis!
+OUTPUT: Complete GuitarSample
 """

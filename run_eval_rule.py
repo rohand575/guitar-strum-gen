@@ -1,4 +1,4 @@
-# Save this as: run_eval_rule.py  (in your project root folder)
+# run_eval_rule.py  —  Rule-based evaluation runner
 import json, sys
 sys.path.insert(0, '.')
 from src.rules.generate_rule_based import generate_rule_based

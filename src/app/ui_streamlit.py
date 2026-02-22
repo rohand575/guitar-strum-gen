@@ -23,7 +23,6 @@ Features:
 
 Author: Rohan Rajendra Dhanawade
 Project: Master's Thesis - SRH Berlin University of Applied Sciences
-Chat: 9 - User Interface (Streamlit)
 """
 
 import streamlit as st

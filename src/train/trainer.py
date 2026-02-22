@@ -9,10 +9,10 @@ model, including:
 - Early stopping to prevent overfitting
 - Checkpoint saving and loading
 - Learning rate scheduling
-- Comprehensive logging
+- Detailed logging
 
-The trainer handles all the complexity of training so you can focus on
-experimenting with hyperparameters and evaluating results.
+The trainer encapsulates the full training pipeline, including
+hyperparameter management and result evaluation.
 
 Example:
     from src.train.trainer import GuitarTrainer, create_trainer
@@ -148,7 +148,7 @@ class GuitarTrainer:
     - Early stopping based on validation loss
     - Learning rate scheduling
     - Checkpoint saving/loading
-    - Comprehensive logging
+    - Detailed logging
     
     Attributes:
         model: GuitarLSTM model to train

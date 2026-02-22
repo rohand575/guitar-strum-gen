@@ -104,4 +104,4 @@ results = {
 with open('neural_metrics.json', 'w') as f:
     json.dump(results, f, indent=2)
 print("\nSaved summary to neural_metrics.json")
-print("DONE — paste full output to Claude.")
+print("Done! Summary saved to neural_metrics.json")

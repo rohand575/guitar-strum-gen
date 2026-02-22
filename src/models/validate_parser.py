@@ -3,7 +3,7 @@ Parser Validation Script
 ========================
 Tests the prompt parser against the actual dataset to measure accuracy.
 
-This generates metrics for your thesis:
+This generates metrics for evaluation:
 - Key extraction accuracy
 - Mode extraction accuracy  
 - Genre detection accuracy

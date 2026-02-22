@@ -1,6 +1,5 @@
 """
 run_metrics.py  –  Run full evaluation on the 29 test samples.
-Place this file in your project ROOT folder (same level as src/ and data/).
 Run: python run_metrics.py
 """
 
@@ -8,7 +7,7 @@ import json
 import sys
 sys.path.insert(0, '.')
 
-# ── Import using the REAL function names from your metrics.py ──────────────
+# ── Imports from evaluation metrics ──────────────
 from src.evaluation.metrics import (
     chord_validity_rate,
     pattern_validity_rate,
@@ -103,5 +102,5 @@ with open('rule_based_metrics.json', 'w') as f:
 
 print("\nSaved results to rule_based_metrics.json")
 print("\n" + "=" * 60)
-print("Done! Copy the output above and paste it back to Claude.")
+print("Done! Results saved to rule_based_metrics.json")
 print("=" * 60)

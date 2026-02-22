@@ -23,7 +23,6 @@ Usage Examples:
 
 Author: Rohan Rajendra Dhanawade
 Project: Master's Thesis - SRH Berlin University of Applied Sciences
-Chat: 9 - User Interface (CLI)
 """
 
 import argparse
@@ -33,12 +32,6 @@ from typing import Dict, Optional
 
 # =============================================================================
 # PART 1: ARGUMENT PARSER SETUP
-# =============================================================================
-# 
-# argparse is Python's built-in library for handling command-line arguments.
-# It automatically generates help messages and handles errors gracefully.
-#
-# Think of it like a form that validates user input before your program runs.
 # =============================================================================
 
 def create_argument_parser() -> argparse.ArgumentParser:

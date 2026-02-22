@@ -41,7 +41,7 @@ except ImportError:
 # =============================================================================
 # VOCABULARY DEFINITION
 # =============================================================================
-# This vocabulary is designed based on the dataset analysis from Chat 4.
+# Vocabulary derived from the dataset analysis.
 # Total: 36 unique tokens
 
 VOCABULARY: Dict[str, int] = {

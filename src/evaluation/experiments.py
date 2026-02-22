@@ -8,7 +8,6 @@ This module contains functions for running comparison experiments:
 
 Author: Rohan Rajendra Dhanawade
 Project: Master's Thesis - SRH Berlin University of Applied Sciences
-Chat: 10 - Evaluation Metrics & Experiments
 """
 
 import json
@@ -302,12 +301,12 @@ def compute_significance_tests(results: Dict) -> Dict:
     print("STATISTICAL SIGNIFICANCE ANALYSIS")
     print("=" * 60)
     
-    # For a more rigorous analysis, you'd compute:
+    # For a more rigorous analysis:
     # 1. McNemar's test for binary metrics (valid/invalid)
     # 2. Paired t-test for continuous metrics
     # 3. Bootstrap confidence intervals
     
-    print("\nNote: For thesis, consider:")
+    print("\nStatistical tests to consider:")
     print("  - McNemar's test for validity comparisons")
     print("  - Bootstrap confidence intervals for diversity")
     print("  - Effect size (Cohen's d) for continuous metrics")

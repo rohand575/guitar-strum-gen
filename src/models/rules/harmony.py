@@ -8,7 +8,7 @@ It can:
     3. Select appropriate chord progressions based on genre/emotion
     4. Validate if a chord belongs to a given key
 
-This is the "brain" of our rule-based baseline system.
+Core component of the rule-based baseline system.
 
 Author: Rohan Rajendra Dhanawade
 Thesis: A Conversational AI System for Symbolic Guitar Strumming Pattern 

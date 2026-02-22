@@ -10,7 +10,7 @@ which uses if-else logic, this uses ACTUAL machine learning:
 
 1. DistilBERT Encoder: Converts text into 768-dimensional embeddings
 2. Classification Heads: Neural networks that predict emotion/genre from embeddings
-3. Fine-tuning: We train the model on YOUR dataset to learn music-specific patterns
+3. Fine-tuning: The model is trained on the dataset to learn music-specific patterns
 
 Architecture:
     ┌─────────────┐
@@ -44,7 +44,6 @@ Architecture:
 │  ic     │ │         │
 └─────────┘ └─────────┘
 
-This is REAL AI/ML - the model LEARNS patterns from your training data!
 """
 
 import torch
@@ -89,7 +88,7 @@ class PromptDataset(Dataset):
     """
     PyTorch Dataset for training the neural prompt parser.
     
-    This converts your JSONL data into tensors that DistilBERT can process.
+    Converts JSONL data into tensors that DistilBERT can process.
     Each sample becomes:
     - input_ids: Tokenized prompt (integers representing words/subwords)
     - attention_mask: Which tokens are real vs padding
@@ -179,10 +178,10 @@ class DistilBertPromptParser(nn.Module):
     """
     Neural Prompt Parser using DistilBERT.
     
-    This is a REAL neural network with:
+    Architecture:
     - 66 million parameters in DistilBERT encoder
     - Classification heads for emotion and genre
-    - Trainable on YOUR dataset
+    - Trainable on the project dataset
     
     Architecture:
         Input Text
@@ -233,7 +232,7 @@ class DistilBertPromptParser(nn.Module):
         super().__init__()
         
         # Load pre-trained DistilBERT
-        # This is the "magic" - 66M parameters pre-trained on massive text!
+        # 66M parameters pre-trained on large text corpora
         self.bert = DistilBertModel.from_pretrained('distilbert-base-uncased')
         
         # Optionally freeze BERT weights (use pre-trained only)
@@ -347,14 +346,14 @@ def train_neural_parser(
     save_path: str = None
 ) -> DistilBertPromptParser:
     """
-    Train the neural prompt parser on your dataset.
+    Train the neural prompt parser on the dataset.
     
-    This is where the LEARNING happens! The model:
-    1. Reads prompts from your dataset
+    Training loop:
+    1. Reads prompts from the dataset
     2. Makes predictions (initially random)
     3. Compares to ground truth labels
     4. Adjusts weights to reduce error (backpropagation)
-    5. Repeats until convergent
+    5. Repeats until convergence
     
     Args:
         train_path: Path to training JSONL file
@@ -668,7 +667,7 @@ if __name__ == "__main__":
     
     print(f"\nTotal parameters: {total_params:,}")
     print(f"Trainable parameters: {trainable_params:,}")
-    print(f"This is a REAL neural network with 66M+ parameters!")
+    print(f"Neural network initialized with 66M+ parameters")
     
     # Test 2: Tokenization demo
     print("\n" + "=" * 70)
@@ -719,8 +718,8 @@ if __name__ == "__main__":
     for idx, prob in enumerate(genre_probs[0]):
         print(f"  {IDX_TO_GENRE[idx]}: {prob.item():.1%}")
     
-    print("\nNote: Model is UNTRAINED - predictions are random!")
-    print("    After training on your dataset, predictions will be meaningful.")
+    print("\nNote: Model is untrained - predictions are random.")
+    print("    After training, predictions will be meaningful.")
     
     # Test 4: Training demo (if dataset exists)
     print("\n" + "=" * 70)
@@ -734,13 +733,13 @@ if __name__ == "__main__":
         print("  >>> model = train_neural_parser('data/processed/train.jsonl', epochs=5)")
     else:
         print(f"\nTraining data not found at {train_path}")
-        print("  Create your dataset first, then train!")
+        print("  Create the dataset first, then train.")
     
     print("\n" + "=" * 70)
     print("DEMO COMPLETE")
     print("=" * 70)
-    print("\nThis is REAL AI/ML using:")
+    print("\nTechnologies used:")
     print("  - DistilBERT: 66M parameter transformer")
-    print("  - PyTorch: Industry-standard deep learning framework")
-    print("  - Transfer Learning: Pre-trained on billions of words")
-    print("  - Fine-tuning: Learns YOUR music-specific patterns")
+    print("  - PyTorch: Deep learning framework")
+    print("  - Transfer learning: Pre-trained on large text corpora")
+    print("  - Fine-tuning: Learns domain-specific musical patterns")

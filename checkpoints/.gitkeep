@@ -1,0 +1,9 @@
+# Model checkpoints saved during training
+#
+# Files here are ignored by Git (too large)
+# Only .gitkeep is tracked to preserve folder structure
+#
+# Typical files:
+#   - best_model.pt     - Best validation loss checkpoint
+#   - latest_model.pt   - Most recent checkpoint
+#   - model_epoch_10.pt - Checkpoint at specific epoch

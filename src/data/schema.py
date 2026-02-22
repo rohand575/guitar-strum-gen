@@ -32,7 +32,7 @@ VALID_MODES = ["major", "minor"]
 
 VALID_TIME_SIGNATURES = ["4/4", "3/4", "6/8"]
 
-# All valid chord symbols your system will recognize
+# All valid chord symbols the system recognizes
 # Major chords: C, D, E, F, G, A, B (and sharps/flats)
 # Minor chords: Cm, Dm, Em, Fm, Gm, Am, Bm (and sharps/flats)
 # Seventh chords: C7, Cmaj7, Cm7, etc.

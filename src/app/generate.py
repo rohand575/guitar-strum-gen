@@ -7,15 +7,10 @@ and strumming patterns from natural language prompts.
 
 The Hybrid Approach:
     1. Parse the user's prompt to extract musical features
-    2. Try neural model generation (LSTM trained in Chat 7)
+    2. Attempt neural model generation (trained LSTM)
     3. Validate the neural output for musical correctness
     4. If invalid → fallback to rule-based generation
     5. Return a validated GuitarSample
-
-Why Hybrid?
-    - Neural models are creative but can produce invalid outputs
-    - Rule-based systems are reliable but repetitive
-    - Combining both gives us creativity WITH safety
 
 Usage:
     from src.app.generate import generate_guitar_part
@@ -30,7 +25,6 @@ Usage:
 
 Author: Rohan Rajendra Dhanawade
 Project: Master's Thesis - SRH Berlin University of Applied Sciences
-Chat: 8 - Hybrid Generator Implementation
 """
 
 from typing import Dict, List, Optional, Tuple, Union
@@ -752,9 +746,8 @@ def extract_features_from_prompt(prompt: str) -> Dict[str, Union[str, int]]:
     """
     Extract musical features from a natural language prompt.
     
-    This uses the rule-based parser from Chat 3. In a full system,
-    you might also use the neural parser (DistilBERT) for better
-    emotion/genre detection.
+    Uses the rule-based parser to extract features. The neural parser
+    (DistilBERT) can also be used for improved emotion/genre detection.
     
     Args:
         prompt: Natural language input like "mellow acoustic in D major"
@@ -831,7 +824,7 @@ def generate_guitar_part(
     """
     Generate a guitar part from a natural language prompt.
     
-    THIS IS THE MAIN FUNCTION YOU'LL USE!
+    Main generation function using the hybrid approach.
     
     The hybrid approach:
     1. Parse the prompt to extract features

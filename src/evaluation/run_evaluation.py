@@ -17,7 +17,6 @@ Usage:
 
 Author: Rohan Rajendra Dhanawade
 Project: Master's Thesis - SRH Berlin University of Applied Sciences
-Chat: 10 - Evaluation Metrics & Experiments
 """
 
 import json
