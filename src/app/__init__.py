@@ -1,26 +1,52 @@
 """
-App Subpackage
+Application Layer - User Interfaces
+====================================
 
-This package contains the user-facing application:
-    - generate.py: Main entry point that combines all components
-    - ui_streamlit.py: Web-based UI using Streamlit
-    - api.py: REST API using FastAPI (alternative to Streamlit)
+This package contains the user-facing interfaces for the Guitar Strum Generator:
 
-The generate.py module is the "glue" that:
-    1. Takes a natural language prompt
-    2. Parses it to extract features
-    3. Generates output using neural model
-    4. Validates output using music theory rules
-    5. Falls back to rule-based system if invalid
-    6. Returns structured JSON result
+- generate.py: Core hybrid generation logic (neural + rule-based)
+- cli.py: Command-line interface
+- ui_streamlit.py: Web interface (Streamlit)
 
-Usage options:
-    - CLI: python -m src.app.generate "your prompt"
-    - Streamlit: streamlit run src/app/ui_streamlit.py
-    - API: uvicorn src.app.api:app --reload
-
-This is what your thesis examiner will demo!
+Usage:
+    # CLI
+    python -m src.app.cli "your prompt here"
+    python -m src.app.cli --interactive
+    
+    # Streamlit Web UI
+    streamlit run src/app/ui_streamlit.py
+    
+    # Programmatic
+    from src.app.generate import generate_guitar_part
+    result = generate_guitar_part("mellow acoustic in D major")
 """
 
-# Will import when implemented:
-# from src.app.generate import generate_guitar_part
+from .generate import (
+    generate_guitar_part,
+    format_result_as_chord_sheet,
+    validate_output,
+    ValidationResult,
+)
+
+from .cli import (
+    main as cli_main,
+    format_result_pretty,
+    format_result_compact,
+    format_result_json,
+)
+
+# Note: ui_streamlit is not imported here because it's meant to be run
+# as a standalone Streamlit app, not imported as a module.
+
+__all__ = [
+    # Core generation
+    "generate_guitar_part",
+    "format_result_as_chord_sheet",
+    "validate_output",
+    "ValidationResult",
+    # CLI
+    "cli_main",
+    "format_result_pretty",
+    "format_result_compact",
+    "format_result_json",
+]

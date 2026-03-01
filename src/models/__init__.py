@@ -1,24 +1,42 @@
 """
-Models Subpackage
+Models Package
+==============
+Guitar Strum Generator - Thesis Project
 
-This package contains the neural network components:
-    - prompt_parser.py: NLP-based feature extraction (DistilBERT)
-    - prompt_features.py: Feature dataclass for extracted features
-    - tokenizer.py: Custom tokenizer for chord-strum sequences
-    - seq_model.py: Transformer encoder-decoder for generation
-
-The neural model architecture:
-    1. Encode the prompt → extract features (key, emotion, style, tempo)
-    2. Condition the sequence model on these features
-    3. Generate tokens: [CHORD_Am, STRUM_D, STRUM_U, ...]
-    4. Decode tokens back to human-readable format
-
-Key design decisions:
-    - Vocabulary ~100 tokens (50 chords + strum tokens + special tokens)
-    - 4-layer Transformer with 256-dim embeddings
-    - Cross-attention to prompt features
+This package contains:
+- prompt_features.py: Data structures for extracted features
+- prompt_parser.py: NLP module for parsing natural language prompts
+- (future) tokenizer.py: Tokenization for neural sequence model
+- (future) seq_model.py: Neural sequence generator
 """
 
-# Will import main classes when implemented:
-# from src.models.tokenizer import GuitarTokenizer
-# from src.models.seq_model import GuitarTransformer
+from .prompt_features import (
+    PromptFeatures,
+    ExtractionConfidence,
+    ConfidenceLevel,
+    DEFAULT_FEATURES,
+    VALID_GENRES,
+    VALID_EMOTIONS,
+    VALID_MODES,
+    VALID_KEY_ROOTS
+)
+
+from .prompt_parser import (
+    PromptParser,
+    parse_prompt
+)
+
+__all__ = [
+    # Data structures
+    'PromptFeatures',
+    'ExtractionConfidence', 
+    'ConfidenceLevel',
+    'DEFAULT_FEATURES',
+    'VALID_GENRES',
+    'VALID_EMOTIONS',
+    'VALID_MODES',
+    'VALID_KEY_ROOTS',
+    # Parser
+    'PromptParser',
+    'parse_prompt'
+]
